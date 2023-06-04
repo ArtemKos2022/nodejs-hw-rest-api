@@ -1,7 +1,6 @@
 const { Schema, model } = require("mongoose");
-const { regexpEmail, regexpPhone } = require("../schemas/regexps")
 const { handleMongooseError } = require("../helpers");
-
+const { regexpEmail, regexpPhone } = require("../schemas/regexps")
 
 const contactSchema = new Schema(
   {

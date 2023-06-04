@@ -1,5 +1,5 @@
+const Contact = require("../models/contact");
 const { HttpError, controlWrapper } = require("../helpers");
-const { Contact } = require("../models/contacts");
 
 const getContactsAll = async (req, res) => {
   const { _id: owner } = req.user;
