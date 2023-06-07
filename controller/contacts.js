@@ -24,6 +24,7 @@ const getContactById = async (req, res) => {
   if (!result) {
     throw new HttpError(404, "Not found");
   }
+
   res.json(result);
 };
 
@@ -41,7 +42,8 @@ const removeContact = async (req, res) => {
   if (!result) {
     throw new HttpError(404, "Not found");
   }
-  res.status(200).json({ "message": "contact deleted" });
+
+  res.status(200).json({ message: "contact deleted" });
 };
 
 const updateContact = async (req, res) => {
@@ -68,7 +70,6 @@ const updateFavorite = async (req, res) => {
   }
   res.json(result);
 };
-
 
 module.exports = {
   getContactsAll: controlWrapper(getContactsAll),
